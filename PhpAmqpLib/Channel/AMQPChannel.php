@@ -168,7 +168,7 @@ class AMQPChannel extends AbstractChannel
 
         return $this->wait(array(
             $this->waitHelper->get_wait('channel.close_ok')
-        ));
+        ), false, 1);
     }
 
     /**
